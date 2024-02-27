@@ -14,13 +14,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 .list-container {
-  /* display: none; */
+  transform: translateX(100%);
   background-color: var(--mainGrey);
   position: absolute;
   right: 0;
   top: 0;
   left: 19%;
   bottom: 0;
+  transition: var(--mainTransition);
+}
+.show-list-container {
+  transform: translateX(0%);
 }
 .sidebar-logo-container {
   background-color: var(--mainDark);
@@ -124,3 +128,5 @@ body {
     display: none;
   }
 }
+
+/* check margin in the sidbar list */
