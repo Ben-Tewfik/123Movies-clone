@@ -1,4 +1,4 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap") * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,11 +8,67 @@
   --mainGreen: #79c142;
   --mainGrey: #eaeaea;
   --mainDark: #171717;
-  --mainTransition: all 0.5 ease-in-out;
+  --mainTransition: all 0.3s ease-in-out;
 }
-.list,
+body {
+  font-family: "Roboto", sans-serif;
+}
+.list-container {
+  /* display: none; */
+  background-color: var(--mainGrey);
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 19%;
+  bottom: 0;
+}
+.sidebar-logo-container {
+  background-color: var(--mainDark);
+  padding: 7px 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  list-style: none;
+  padding: 1rem;
+}
+.list .list-item .link {
+  display: block;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--mainDark);
+  padding: 0.5rem 0;
+  font-weight: bold;
+  transition: var(--mainTransition);
+}
+/* .list .list-item .link:last-child() {
+  padding: 0;
+} */
+.list .list-item .link:hover {
+  color: var(--mainGreen);
+}
 .search-container {
-  display: none;
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+.nav-search {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0.7rem 2.5rem;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  color: var(--mainGrey);
+}
+.nav-search:focus {
+  outline: none;
 }
 .nav {
   box-shadow: 0 0px 5px rgba(0, 0, 0, 0.3);
@@ -20,20 +76,17 @@
 .nav-container {
   max-width: 90vw;
   margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .logo-container {
   height: 100%;
   padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
 }
 .logo {
   width: 11.5rem;
 }
-.close {
-  display: none;
-}
+
 .show-btn {
   display: block;
 }
@@ -48,7 +101,10 @@
 .btn:hover {
   color: var(--mainGreen);
 }
-
+.close {
+  color: var(--mainWhite);
+  background-color: var(--mainDark);
+}
 @media screen and (min-width: 992px) {
   .list,
   .search-container {

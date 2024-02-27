@@ -13,37 +13,46 @@
     <!-- navbar -->
     <nav class="nav">
       <div class="nav-container">
+        <!-- logo container -->
         <div class="logo-container">
+          <!-- logo -->
           <a href="index.html">
             <img src="./images/./logo.png" alt="logo" class="logo" />
           </a>
-        </div>
-        <ul class="list">
-          <li class="list-item"><a href="#" class="link">home</a></li>
-          <li class="list-item"><a href="#" class="link">genres</a></li>
-          <li class="list-item"><a href="#" class="link">country</a></li>
-          <li class="list-item"><a href="#" class="link">movies</a></li>
-          <li class="list-item"><a href="#" class="link">tv-series</a></li>
-          <li class="list-item"><a href="#" class="link">top imdb</a></li>
-        </ul>
-        <div class="search-container">
-          <input
-            type="search"
-            name="search"
-            id="search"
-            placeholder="search movies or series"
-          />
-          <label for="search" class="search-icon">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </label>
-        </div>
-        <div class="toggle-icon-container">
           <button class="btn bars">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <button class="btn close">
-            <i class="fa-solid fa-x"></i>
-          </button>
+        </div>
+        <!-- close button and links and search container -->
+        <div class="list-container">
+          <div class="sidebar-logo-container">
+            <img src="./images/./logo.png" alt="logo" class="logo" />
+            <button class="btn close">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </div>
+          <!-- link list -->
+          <ul class="list">
+            <li class="list-item"><a href="#" class="link">home</a></li>
+            <li class="list-item"><a href="#" class="link">genres</a></li>
+            <li class="list-item"><a href="#" class="link">country</a></li>
+            <li class="list-item"><a href="#" class="link">movies</a></li>
+            <li class="list-item"><a href="#" class="link">tv-series</a></li>
+            <li class="list-item"><a href="#" class="link">top imdb</a></li>
+          </ul>
+          <!-- search -->
+          <div class="search-container">
+            <input
+              type="search"
+              name="search"
+              id="search"
+              class="nav-search"
+              placeholder="Search movies or series"
+            />
+            <label for="search" class="search-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+          </div>
         </div>
       </div>
     </nav>
