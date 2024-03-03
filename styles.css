@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-root {
+:root {
   --mainWhite: #fff;
   --mainGreen: #79c142;
   --mainGrey: #eaeaea;
@@ -112,13 +112,40 @@ body {
   background-color: var(--mainDark);
 }
 @media screen and (min-width: 992px) {
-  .list,
+  .bars {
+    display: none;
+  }
+  .list-container .sidebar-logo-container {
+    display: none;
+  }
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  .list-container {
+    transform: translateX(0);
+    background-color: white;
+    position: static;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+  .logo-container {
+    flex-basis: 20%;
+  }
+  /* .list,
   .search-container {
     display: block;
-  }
+  } */
   .list {
-    list-style-type: none;
     display: flex;
+    padding: 0;
+    gap: 1rem;
+    flex-basis: 100%;
+  }
+  .search-container {
+    flex-grow: 0;
+    flex-shrink: 1;
   }
   .link {
     display: inline-block;
@@ -126,9 +153,9 @@ body {
     text-decoration: none;
     color: var(--mainDark);
   }
-  .toggle-icon-container {
+  /* .toggle-icon-container {
     display: none;
-  }
+  } */
 }
 
 /* check margin in the sidbar list */
