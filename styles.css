@@ -86,8 +86,8 @@ body {
 .logo-container {
   height: 100%;
   padding: 5px 0;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 .logo {
   width: 11.5rem;
@@ -119,7 +119,8 @@ body {
     display: none;
   }
   .nav-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
     align-items: center;
   }
   .list-container {
